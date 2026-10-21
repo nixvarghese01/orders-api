@@ -1,0 +1,24 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: orders-api
+  description: "Orders REST API created from the NestJS golden path"
+  annotations:
+    github.com/project-slug: nixvarghese01/orders-api
+    backstage.io/techdocs-ref: dir:.
+    idp.io/request-id: 47711a74-e8bf-442b-ad3d-494c218f136b
+    idp.io/environment: dev
+    idp.io/availability-tier: standard
+    # Kubernetes tab: the release's pods, in the application's namespace (labels set by the Helm chart).
+    backstage.io/kubernetes-label-selector: app.kubernetes.io/instance=orders-api
+    backstage.io/kubernetes-namespace: orders-api
+  tags: [nestjs, typescript, golden-path]
+  links:
+    - url: https://orders-api.4.165.23.47.nip.io
+      title: Application endpoint
+    - url: https://orders-api.4.165.23.47.nip.io/docs
+      title: API docs
+spec:
+  type: service
+  lifecycle: experimental
+  owner: group:default/team-orders
